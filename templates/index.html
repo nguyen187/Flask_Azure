@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Azure Platform</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+  <link rel="stylesheet" href="../static/style.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+<link rel="shortcut icon" href="/static/image/iconpage.png">
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div class="admin-panel clearfix">
+  
+  <div class="slidebar">
+    <div class="logo">
+      <!-- <a src="../image/iconpage.pg" href=""></a> -->
+      <a href="#home"><img  src="/static/image/iconhome.png" alt="Girl in a jacket"></a>
+      <!-- <img src="../image/iconpage.png"> -->
+    </div>
+    <ul>
+      <a href="#home" {% if active_link == "home" %}class="active"{% endif %}>Home</a>
+
+      <li {% if active_link == "ML" %} class="active"{% endif %}><a href="#ML">ML App</a></li>
+      <li {% if active_link == "dashboard" %} class="active"{% endif %}><a href="#dashboard" id="targeted">Dashboard</a></li>
+    </ul>
+      <!-- <li><a href="#pages">pages</a></li>
+      <li><a href="#links">links</a></li>
+      <li><a href="#comments">comments</a></li>
+      <li><a href="#widgets">widgets</a></li>
+      <li><a href="#plugins">plugins</a></li>
+      <li><a href="#users">users</a></li>
+      <li><a href="#tools">tools</a></li>
+      <li><a href="#settings">settings</a></li> -->
+
+  </div>
+  
+  <div class="main">
+    <!-- <ul class="topbar clearfix">
+      <li><a href="#">q</a></li>
+      <li><a href="#">p</a></li>
+      <li><a href="#">o</a></li>
+      <li><a href="#">f</a></li>
+      <li><a href="#">n</a></li>
+    </ul> -->
+
+    <div class="mainContent clearfix">
+
+      <div id="home">
+        <h2 class="header"><span class="icon"></span>Dashboard</h2>
+          <div class="monitor">
+            <p>Show CSV file in html using FLASK</p>
+ 
+                <form method="POST" enctype="multipart/form-data" action="/">
+                    <input type="file" id="myFile" name="uploaded-file" accept=".csv">
+                    <br>
+                    <br>
+
+                    <button type="submit" class="submit" name="submit">Upload file</button>
+                </form>
+                    <p>{{alert}}</p>
+              <!-- <br> -->
+                <!-- <p style="color:green;">file uploaded successfully</p> -->
+              <!-- <form action="/show_data" target="_blank">
+                    <input type="submit" value="Show CSV" />
+                </form>  
+                -->
+          </div>
+         <div class="quick-press">
+           <h4>Quick Press</h4>
+           <form action="" method="post">
+             <input type="text" name="title" placeholder="Title"/>
+             <input type="text" name="content" placeholder="Content"/>
+             <input type="text" name="tags" placeholder="Tags"/>
+             <button type="button" class="save"></button>
+             <button type="button" class="delet"></button>
+             <button type="submit" class="submit" name="submit">Publish</button>
+           </form>
+           
+         </div>
+       </div>
+       <div id="ML">
+         <h2 class="header">ML App</h2>
+
+       </div>
+       <div id="dashboard">
+         <h2 class="header">Dashboard</h2>
+         xin chao
+       </div>
+       <!-- <div id="pages">
+         <h2 class="header">pages</h2>
+       </div>
+       <div id="links">
+         <h2 class="header">links</h2>
+         <h4>Right Now</h4>
+       </div>
+       <div id="comments">
+         <h2 class="header">comments</h2>
+       </div>
+       <div id="widgets">
+         <h2 class="header">widgets</h2>
+       </div>
+       <div id="plugins">
+         <h2 class="header">plugins</h2>
+       </div>
+       <div id="users">
+         <h2 class="header">users</h2>
+       </div>
+       <div id="tools">
+         <h2 class="header">tools</h2>
+       </div>
+       <div id="settings">
+         <h2 class="header">settings</h2>
+       </div>
+     </div>
+     <ul class="statusbar">
+       <li><a href=""></a></li>
+       <li><a href=""></a></li>
+       <li class="profiles-setting"><a href="">s</a></li>
+       <li class="logout"><a href="">k</a></li>
+     </ul> -->
+   </div>
+</div>
+<!-- partial -->
+  <script src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+</body>
+</html>
