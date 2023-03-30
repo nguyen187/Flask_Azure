@@ -29,7 +29,7 @@ def upload_To_BlobStorage(file_path,file_name):
 app = Flask(__name__)
  
 basedir = os.path.abspath(os.path.dirname(__file__))
-UPLOAD_FOLDER = os.getcwd() + '\\static\\uploads'
+UPLOAD_FOLDER = os.getcwd() + '/static/uploads'
 # RESULT_FOLDER = os.getcwd() + '/static/img_result/'
 @app.route('/')
 def index():
