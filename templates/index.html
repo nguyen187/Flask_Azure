@@ -15,15 +15,15 @@
   <div class="slidebar">
     <div class="logo">
       <!-- <a src="../image/iconpage.pg" href=""></a> -->
-      <a href="#home"><img  src="/static/image/iconhome.png" alt="Girl in a jacket"></a>
+      <a href="#home"><img  src="/static/image/iconhome.png"></a>
       <!-- <img src="../image/iconpage.png"> -->
     </div>
     <ul>
-      <a href="#home" {% if active_link == "home" %}class="active"{% endif %}>Home</a>
-
+      <li {% if active_link == "home" %} class="active"{% endif %}><a href="#home" selected>Home</a></li>
       <li {% if active_link == "ML" %} class="active"{% endif %}><a href="#ML">ML App</a></li>
       <li {% if active_link == "dashboard" %} class="active"{% endif %}><a href="#dashboard" id="targeted">Dashboard</a></li>
     </ul>
+
       <!-- <li><a href="#pages">pages</a></li>
       <li><a href="#links">links</a></li>
       <li><a href="#comments">comments</a></li>
@@ -32,22 +32,14 @@
       <li><a href="#users">users</a></li>
       <li><a href="#tools">tools</a></li>
       <li><a href="#settings">settings</a></li> -->
-
   </div>
   
   <div class="main">
-    <!-- <ul class="topbar clearfix">
-      <li><a href="#">q</a></li>
-      <li><a href="#">p</a></li>
-      <li><a href="#">o</a></li>
-      <li><a href="#">f</a></li>
-      <li><a href="#">n</a></li>
-    </ul> -->
-
+   
     <div class="mainContent clearfix">
 
       <div id="home">
-        <h2 class="header"><span class="icon"></span>Dashboard</h2>
+        <h2 class="header"><span class="icon"></span>Home</h2>
           <div class="monitor">
             <p>Show CSV file in html using FLASK</p>
  
@@ -125,3 +117,10 @@
   <script src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
 </body>
 </html>
+
+<script>
+  window.onload = function() {
+    window.location.href = '#home';
+  }
+</script>
+

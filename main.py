@@ -5,10 +5,10 @@ import os
 from werkzeug.utils import secure_filename
 from azure.storage.blob import BlobServiceClient
 
-storage_account_key = "5dLVgbOA1ADjScKtKuJXNZUohV3ml7HS0XezwIjgkPhYi+VArRO4KGvL3fP3R3RQSWDlHxMYrKXx+ASt1FpTqQ=="
-storage_account_name = "demov1"
-connection_string = "DefaultEndpointsProtocol=https;AccountName=demov1;AccountKey=5dLVgbOA1ADjScKtKuJXNZUohV3ml7HS0XezwIjgkPhYi+VArRO4KGvL3fP3R3RQSWDlHxMYrKXx+ASt1FpTqQ==;EndpointSuffix=core.windows.net"
-container_name = "containerdemov1"
+storage_account_key = "fI1afDCWKRqTzy2EWBFtN9XIexcKlLXP/RjTr5tFTdSSo4J8y5GJ+xzlYQmvin2eP626y8NRJQWo+AStvZ0Jww=="
+storage_account_name = "flasktoblob"
+connection_string = "DefaultEndpointsProtocol=https;AccountName=flasktoblob;AccountKey=fI1afDCWKRqTzy2EWBFtN9XIexcKlLXP/RjTr5tFTdSSo4J8y5GJ+xzlYQmvin2eP626y8NRJQWo+AStvZ0Jww==;EndpointSuffix=core.windows.net"
+container_name = "test1"
 
 def upload_To_BlobStorage(file_path,file_name):
     try:
@@ -55,6 +55,6 @@ def uploadFile():
         # Render template with active link
         
         return render_template('index.html', active_link=Markup('home'), alert=Markup(alert))
-    return render_template('index.html', active_link='home')
+    return render_template('index.html', active_link='#home')
 if __name__=='__main__':
     app.run(host="0.0.0.0",port = 80)
