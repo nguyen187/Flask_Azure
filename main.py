@@ -8,6 +8,7 @@ from azure.storage.blob import BlobServiceClient
 storage_account_key = "fI1afDCWKRqTzy2EWBFtN9XIexcKlLXP/RjTr5tFTdSSo4J8y5GJ+xzlYQmvin2eP626y8NRJQWo+AStvZ0Jww=="
 storage_account_name = "flasktoblob"
 connection_string = "DefaultEndpointsProtocol=https;AccountName=flasktoblob;AccountKey=fI1afDCWKRqTzy2EWBFtN9XIexcKlLXP/RjTr5tFTdSSo4J8y5GJ+xzlYQmvin2eP626y8NRJQWo+AStvZ0Jww==;EndpointSuffix=core.windows.net"
+
 def load_photo():
     blob_service_client = BlobServiceClient.from_connection_string(conn_str=connection_string)
     try:
@@ -19,7 +20,6 @@ def load_photo():
         print("Creating container...")
         container_client = blob_service_client.create_container(container_name) # create a container in the storage account if it does not exist
         
-
     blob_items = container_client.list_blobs() # list all the blobs in the container
 
     img_html = "<div style='display: flex; justify-content: space-between; flex-wrap: wrap;'>"
@@ -95,14 +95,13 @@ def uploadFile():
         
         alert = upload_To_BlobStorage(file_path, filename,container_name='test1')
 
-        
         os.remove(file_path)
 
         # Render template with active link
         img_html = load_photo()
         csv_file = load_file()
 
-        return render_template('index.html', active_link=Markup('home'), alert1=Markup(alert),img_html = Markup(img_html),csv_file= csv_file)
+        return render_template('index.html', alert1=Markup(alert),img_html = Markup(img_html),csv_file= csv_file)
     return render_template('index.html', active_link='#home',img_html = Markup(img_html),csv_file= csv_file)
 
 # định nghĩa một URL để tải xuống các tệp CSV
